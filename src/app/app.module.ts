@@ -6,6 +6,8 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { ServersService } from './servers/servers.service';
+import { AuthService } from './auth.service';
+import { AuthGuardService } from './auth-guard.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -33,7 +35,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HttpModule,
     AppRoutingModule
   ],
-  providers: [ServersService],
+  providers: [ServersService, AuthService, AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
