@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ServersService } from './servers/servers.service';
 import { AuthService } from './auth.service';
 import { AuthGuardService } from './auth-guard.service';
+import { CanDeactivateGuard } from './servers/edit-server/can-deactivate-guard.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -35,7 +36,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HttpModule,
     AppRoutingModule
   ],
-  providers: [ServersService, AuthService, AuthGuardService],
+  providers: [ServersService, AuthService, AuthGuardService, CanDeactivateGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
